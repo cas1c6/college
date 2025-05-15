@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Luxury Watches</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Luxury Watches</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <form class="header-search" action="catalog.html" method="get" onsubmit="return false;">
+                <input type="text" id="searchInput" placeholder="Поиск часов...">
+                <button type="button" id="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="header-icons">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="user-icon">
+                    <a href="login.html">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+        <div class="container">
+            <h1>Корзина</h1>
+            <div class="cart-container">
+                <div class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="cart-summary">
+                    <h2>Итого</h2>
+                    <div class="summary-item">
+                        <span>Подытог:</span>
+                        <span class="subtotal">0 ₽</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Доставка:</span>
+                        <span class="shipping">0 ₽</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Итого:</span>
+                        <span class="total-amount">0 ₽</span>
+                    </div>
+                    <button class="checkout-button">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Luxury Watches</h3>
+                <p>Ваш надежный партнер в мире элитных часов</p>
+            </div>
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Luxury Watches. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

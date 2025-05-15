@@ -1,0 +1,80 @@
+@startuml
+
+' Стили
+skinparam classAttributeIconSize 0
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+' Классы
+class Product {
+    -id: String
+    -name: String
+    -price: Number
+    -image: String
+    -brand: String
+    +addToCart()
+    +removeFromCart()
+    +toggleFavorite()
+}
+
+class Cart {
+    -items: Array<Product>
+    -subtotal: Number
+    -shipping: Number
+    -total: Number
+    +addItem(product: Product)
+    +removeItem(index: Number)
+    +updateTotal()
+    +clear()
+}
+
+class User {
+    -id: String
+    -name: String
+    -email: String
+    -password: String
+    +login()
+    +register()
+    +updateProfile()
+    +logout()
+}
+
+class Order {
+    -id: String
+    -userId: String
+    -items: Array<Product>
+    -total: Number
+    -status: String
+    -date: Date
+    +create()
+    +updateStatus()
+    +cancel()
+}
+
+class Carousel {
+    -currentIndex: Number
+    -items: Array<Product>
+    +next()
+    +prev()
+    +updatePosition()
+}
+
+class Search {
+    -query: String
+    -results: Array<Product>
+    +search()
+    +filter()
+    +sort()
+}
+
+' Связи
+User "1" -- "*" Order : places
+Cart "*" -- "*" Product : contains
+Order "*" -- "*" Product : includes
+Carousel "*" -- "*" Product : displays
+Search "1" -- "*" Product : finds
+
+@enduml 

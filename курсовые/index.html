@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Watches - Элитные часы</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Luxury Watches</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <form class="header-search" action="catalog.html" method="get" onsubmit="return false;">
+                <input type="text" id="searchInput" placeholder="Поиск часов...">
+                <button type="button" id="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="header-icons">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="user-icon">
+                    <a href="login.html">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Элитные часы для избранных</h1>
+                <p>Откройте для себя мир премиальных часов</p>
+                <a href="catalog.html" class="cta-button">Смотреть каталог</a>
+            </div>
+        </section>
+
+        <section class="featured">
+            <h2>Популярные модели</h2>
+            <div class="carousel">
+                <button class="carousel-button prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <!-- Royal Collection -->
+                        <div class="product-card" data-id="1" data-brand="rolex">
+                            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Royal Collection">
+                            <h3>Royal Collection</h3>
+                            <p class="price">850 000 ₽</p>
+                            <button class="add-to-cart">Добавить в корзину</button>
+                        </div>
+
+                        <!-- Diamond Elite -->
+                        <div class="product-card" data-id="2" data-brand="patek">
+                            <img src="https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Diamond Elite">
+                            <h3>Diamond Elite</h3>
+                            <p class="price">1 200 000 ₽</p>
+                            <button class="add-to-cart">Добавить в корзину</button>
+                        </div>
+
+                        <!-- Heritage Series -->
+                        <div class="product-card" data-id="3" data-brand="omega">
+                            <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Heritage Series">
+                            <h3>Heritage Series</h3>
+                            <p class="price">950 000 ₽</p>
+                            <button class="add-to-cart">Добавить в корзину</button>
+                        </div>
+
+                        <!-- Master Chronograph -->
+                        <div class="product-card" data-id="4" data-brand="cartier">
+                            <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Master Chronograph">
+                            <h3>Master Chronograph</h3>
+                            <p class="price">1 500 000 ₽</p>
+                            <button class="add-to-cart">Добавить в корзину</button>
+                        </div>
+
+                        <!-- Grand Complication -->
+                        <div class="product-card" data-id="5" data-brand="patek">
+                            <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Grand Complication">
+                            <h3>Grand Complication</h3>
+                            <p class="price">2 800 000 ₽</p>
+                            <button class="add-to-cart">Добавить в корзину</button>
+                        </div>
+
+                        <!-- Classic Elegance -->
+                        <div class="product-card" data-id="6" data-brand="rolex">
+                            <img src="https://images.unsplash.com/photo-1548169874-53e85f753f1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                alt="Classic Elegance">
+                            <h3>Classic Elegance</h3>
+                            <p class="price">1 150 000 ₽</p>
+                            <button class="add-to-cart">Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-button next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>О нас</h2>
+            <div class="about-content">
+                <p>Мы предлагаем только оригинальные элитные часы от ведущих производителей. Наша компания работает на
+                    рынке более 15 лет и гарантирует подлинность каждого изделия.</p>
+                <a href="about.html" class="learn-more">Узнать больше</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Контакты</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+7 (999) 123-45-67</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@luxurywatches.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Москва, ул. Примерная, 123</p>
+                </div>
+            </div>
+            <a href="contact.html" class="contact-button">Связаться с нами</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Luxury Watches</h3>
+                <p>Ваш надежный партнер в мире элитных часов</p>
+            </div>
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Luxury Watches. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Luxury Watches</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Luxury Watches</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html" class="active">Каталог</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <form class="header-search" action="catalog.html" method="get" onsubmit="return false;">
+                <input type="text" id="searchInput" placeholder="Поиск часов...">
+                <button type="button" id="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="header-icons">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="user-icon">
+                    <a href="login.html">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="catalog-page">
+        <div class="container">
+            <h1>Каталог часов</h1>
+
+            <!-- Фильтры и сортировка -->
+            <div class="filter-sort-container">
+                <div class="filter-group">
+                    <label for="price-range">Цена:</label>
+                    <input type="range" id="price-range" min="0" max="1000000" step="10000">
+                    <div class="price-values">
+                        <span id="min-price">0 ₽</span>
+                        <span id="max-price">1 000 000 ₽</span>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label for="sort-by">Сортировка:</label>
+                    <select id="sort-by">
+                        <option value="default">По умолчанию</option>
+                        <option value="price-asc">По возрастанию цены</option>
+                        <option value="price-desc">По убыванию цены</option>
+                        <option value="rating">По рейтингу</option>
+                        <option value="newest">Сначала новые</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Фильтр по брендам -->
+            <div class="brand-filter">
+                <button class="brand-button active" data-brand="all">Все бренды</button>
+                <button class="brand-button" data-brand="rolex">Rolex</button>
+                <button class="brand-button" data-brand="omega">Omega</button>
+                <button class="brand-button" data-brand="patek">Patek Philippe</button>
+                <button class="brand-button" data-brand="cartier">Cartier</button>
+            </div>
+
+            <!-- Сетка продуктов -->
+            <div class="product-grid">
+                <!-- Royal Collection -->
+                <div class="product-card" data-id="1" data-brand="rolex" data-rating="4.8" data-date="2024-01-15"
+                    data-price="850000">
+                    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Royal Collection">
+                    <h3>Royal Collection</h3>
+                    <p class="price">850 000 ₽</p>
+                    <div class="rating">★ 4.8</div>
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+
+                <!-- Diamond Elite -->
+                <div class="product-card" data-id="2" data-brand="patek" data-rating="4.9" data-date="2024-02-01"
+                    data-price="1200000">
+                    <img src="https://images.unsplash.com/photo-1539874754764-5a96559165b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Diamond Elite">
+                    <h3>Diamond Elite</h3>
+                    <p class="price">1 200 000 ₽</p>
+                    <div class="rating">★ 4.9</div>
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+
+                <!-- Heritage Series -->
+                <div class="product-card" data-id="3" data-brand="omega" data-rating="4.7" data-date="2024-01-20"
+                    data-price="950000">
+                    <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Heritage Series">
+                    <h3>Heritage Series</h3>
+                    <p class="price">950 000 ₽</p>
+                    <div class="rating">★ 4.7</div>
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+
+                <!-- Master Chronograph -->
+                <div class="product-card" data-id="4" data-brand="cartier" data-rating="4.6" data-date="2024-02-10"
+                    data-price="1500000">
+                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Master Chronograph">
+                    <h3>Master Chronograph</h3>
+                    <p class="price">1 500 000 ₽</p>
+                    <div class="rating">★ 4.6</div>
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+
+                <!-- Grand Complication -->
+                <div class="product-card" data-id="5" data-brand="patek" data-rating="5.0" data-date="2024-02-15"
+                    data-price="2800000">
+                    <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Grand Complication">
+                    <h3>Grand Complication</h3>
+                    <p class="price">2 800 000 ₽</p>
+                    <div class="rating">★ 5.0</div>
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+
+                <!-- Classic Elegance -->
+                <div class="product-card" data-id="6" data-brand="rolex" data-rating="4.5" data-date="2024-01-25"
+                    data-price="1150000">
+                    <img src="https://images.unsplash.com/photo-1548169874-53e85f753f1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        alt="Classic Elegance">
+                    <h3>Classic Elegance</h3>
+                    <p class="price">1 150 000 ₽</p>
+                    <div class="rating">★ 4.5</div>
+                    <button class="add-to-cart">Добавить в корзину</button>
+                </div>
+            </div>
+
+            <!-- Рекомендации -->
+            <div class="recommendations-section">
+                <h2>Рекомендуемые товары</h2>
+                <div class="recommendations-grid">
+                    <!-- Здесь будут отображаться рекомендуемые товары -->
+                </div>
+            </div>
+
+            <!-- Модальное окно сравнения -->
+            <div class="comparison-container" style="display: none;">
+                <h2>Сравнение товаров</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Характеристика</th>
+                            <th>Товар 1</th>
+                            <th>Товар 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Здесь будет таблица сравнения -->
+                    </tbody>
+                </table>
+                <button class="close-comparison">Закрыть</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Luxury Watches</h3>
+                <p>Ваш надежный партнер в мире элитных часов</p>
+            </div>
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Luxury Watches. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

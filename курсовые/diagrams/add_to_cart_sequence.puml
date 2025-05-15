@@ -1,0 +1,48 @@
+@startuml
+
+' Стили
+skinparam sequence {
+    ArrowColor Black
+    LifeLineBorderColor Black
+    ParticipantBorderColor Black
+    ParticipantBackgroundColor White
+}
+
+' Участники
+actor User as "Пользователь"
+participant "Product Card" as PC
+participant "Cart" as Cart
+participant "LocalStorage" as LS
+participant "UI" as UI
+
+' Последовательность
+User -> PC: Нажимает "Добавить в корзину"
+activate PC
+
+PC -> Cart: addToCart(product)
+activate Cart
+
+Cart -> Cart: Проверка наличия товара
+alt Товар уже в корзине
+    Cart --> PC: Возвращает false
+    PC --> User: Показывает уведомление
+else Товар не в корзине
+    Cart -> Cart: Добавляет товар
+    Cart -> LS: Сохраняет корзину
+    activate LS
+    LS --> Cart: Подтверждение сохранения
+    deactivate LS
+    
+    Cart -> UI: updateCartCount()
+    activate UI
+    UI --> Cart: Обновляет счетчик
+    deactivate UI
+    
+    Cart --> PC: Возвращает true
+    PC --> User: Показывает уведомление об успехе
+end
+
+deactivate Cart
+deactivate PC
+
+@enduml 

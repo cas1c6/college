@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - Luxury Watches</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Luxury Watches</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html" class="active">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <form class="header-search" action="catalog.html" method="get" onsubmit="return false;">
+                <input type="text" id="searchInput" placeholder="Поиск часов...">
+                <button type="button" id="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="header-icons">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="user-icon">
+                    <a href="login.html">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-page">
+            <h1>О компании Luxury Watches</h1>
+            <div class="about-content">
+                <div class="about-section">
+                    <h2>Наша история</h2>
+                    <p>Компания Luxury Watches была основана в 2009 году группой энтузиастов, увлеченных миром элитных
+                        часов. За 16 лет работы мы стали одним из ведущих поставщиков премиальных часовых механизмов в
+                        России.</p>
+                </div>
+
+                <div class="about-section">
+                    <h2>Наши преимущества</h2>
+                    <div class="advantages-grid">
+                        <div class="advantage-item">
+                            <i class="fas fa-certificate"></i>
+                            <h3>Гарантия подлинности</h3>
+                            <p>Все часы проходят тщательную проверку на подлинность</p>
+                        </div>
+                        <div class="advantage-item">
+                            <i class="fas fa-tools"></i>
+                            <h3>Сервисное обслуживание</h3>
+                            <p>Собственный сервисный центр с опытными мастерами</p>
+                        </div>
+                        <div class="advantage-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Гарантия качества</h3>
+                            <p>Официальная гарантия на все модели часов</p>
+                        </div>
+                        <div class="advantage-item">
+                            <i class="fas fa-truck"></i>
+                            <h3>Быстрая доставка</h3>
+                            <p>Доставка по всей России и странам СНГ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h2>Наши партнеры</h2>
+                    <p>Мы сотрудничаем с ведущими производителями элитных часов, включая Rolex, Patek Philippe, Audemars
+                        Piguet, Vacheron Constantin и другие престижные бренды.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Luxury Watches</h3>
+                <p>Ваш надежный партнер в мире элитных часов</p>
+            </div>
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Luxury Watches. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

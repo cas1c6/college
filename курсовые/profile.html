@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Luxury Watches</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Luxury Watches</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <form class="header-search" action="catalog.html" method="get" onsubmit="return false;">
+                <input type="text" id="searchInput" placeholder="Поиск часов...">
+                <button type="button" id="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="header-icons">
+                <div class="cart-icon">
+                    <a href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <div class="user-icon">
+                    <a href="profile.html" class="active">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-page">
+            <div class="profile-container">
+                <div class="profile-sidebar">
+                    <div class="profile-info">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h2>Иван Иванов</h2>
+                        <p>ivan@example.com</p>
+                    </div>
+                    <nav class="profile-nav">
+                        <a href="#personal" class="active">Личные данные</a>
+                        <a href="#orders">История заказов</a>
+                        <a href="#favorites">Избранное</a>
+                        <a href="#settings">Настройки</a>
+                        <a href="#" class="logout">Выйти</a>
+                    </nav>
+                </div>
+                <div class="profile-content">
+                    <section id="personal" class="profile-section active">
+                        <h2>Личные данные</h2>
+                        <form id="profileForm" class="profile-form">
+                            <div class="form-group">
+                                <label for="fullName">Полное имя</label>
+                                <input type="text" id="fullName" name="fullName" value="Иван Иванов">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" value="ivan@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" name="phone" value="+7 (999) 123-45-67">
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Адрес</label>
+                                <textarea id="address" name="address">Москва, ул. Примерная, 123</textarea>
+                            </div>
+                            <button type="submit" class="profile-button">Сохранить изменения</button>
+                        </form>
+                    </section>
+
+                    <section id="orders" class="profile-section">
+                        <h2>История заказов</h2>
+                        <div class="orders-list">
+                            <div class="order-item">
+                                <div class="order-header">
+                                    <span class="order-number">Заказ #12345</span>
+                                    <span class="order-date">15.03.2024</span>
+                                    <span class="order-status">Доставлен</span>
+                                </div>
+                                <div class="order-content">
+                                    <div class="order-product">
+                                        <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                            alt="Chronograph Master">
+                                        <div class="order-product-info">
+                                            <h3>Chronograph Master</h3>
+                                            <p class="price">$2,999</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <span class="order-total">Итого: $2,999</span>
+                                    <button class="order-details">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="favorites" class="profile-section">
+                        <h2>Избранное</h2>
+                        <div class="favorites-grid">
+                            <div class="product-card">
+                                <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                    alt="Chronograph Master">
+                                <h3>Chronograph Master</h3>
+                                <p class="price">$2,999</p>
+                                <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="settings" class="profile-section">
+                        <h2>Настройки</h2>
+                        <form id="settingsForm" class="profile-form">
+                            <div class="form-group">
+                                <label for="currentPassword">Текущий пароль</label>
+                                <input type="password" id="currentPassword" name="currentPassword">
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">Новый пароль</label>
+                                <input type="password" id="newPassword" name="newPassword">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Подтвердите пароль</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword">
+                            </div>
+                            <button type="submit" class="profile-button">Изменить пароль</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Luxury Watches</h3>
+                <p>Ваш надежный партнер в мире элитных часов</p>
+            </div>
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Luxury Watches. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
